@@ -582,6 +582,109 @@ var_dump($days);
     }
 
     // Outputs hurray it's the weekend
+</code></pre>
+<h4 id="lookups">Lookups</h4>
+<pre><code>  $day = "Monday";
+
+  $days = [
+    "Monday"     =&gt; "It's Monday",
+    "Tuesday"    =&gt; "It's Tuesday",
+    "Wednesday"  =&gt; "It's Wednesday"
+  ];
+
+  echo $days[$day];
+
+  // Output will be It's Monday
+</code></pre>
+<p><em>Lookups look cool huh!</em></p>
+<p>Be very careful imagine we assign <code>$day</code> nonsense values</p>
+<pre><code>  $day = "weeeeeeeeeeeeeeeeeeeeeeee";
+
+  $days = [
+    "Monday"     =&gt; "It's Monday",
+    "Tuesday"    =&gt; "It's Tuesday",
+    "Wednesday"  =&gt; "It's Wednesday"
+  ];
+
+  echo $days[$day];
+
+  // Output will be Undefined index: weeeeeeeeeeeeeeeeeeeeeeee
+</code></pre>
+<p>This is because we do not weeeeeeeeeeeeeeeeeeeeeeee index in <code>$days</code></p>
+<blockquote>
+<p><em>"So how may I solve this?"</em></p>
+</blockquote>
+<p>To solve this problem lets use a ternary orepration</p>
+<pre><code>  $day = "weeeeeeeeeeeeeeeeeeeeeeee";
+
+  $days = [
+    "Monday"     =&gt; "It's Monday",
+    "Tuesday"    =&gt; "It's Tuesday",
+    "Wednesday"  =&gt; "It's Wednesday"
+  ];
+
+  echo isset($days[$day]) ? $days[$day] : "Not a day.";
+
+  // Output will be Not a day
+</code></pre>
+<blockquote>
+<p><em>"Whoa what was that?????"</em></p>
+</blockquote>
+<p><code>isset($days[$day]) ? $days[$day] : "Not a day."</code> Basically is a shortform of if statement. It means, if isset($days[$day]) you have the day show $days[$day] else "Not a day."</p>
+<h3 id="loops">Loops</h3>
+<p>Loops let you execute a block of code number of times.</p>
+<h4 id="while-loop">While loop</h4>
+<pre><code>  &lt;?php
+
+  $i = 1;
+
+  while ($i &lt; 6) {
+
+    echo "Number $i &lt;br /&gt;";
+    $i++;
+
+  }
+
+  /**
+   * Outputs
+   * Number 1
+   * Number 2
+   * Number 3
+   * Number 4
+   * Number 5
+   */
+</code></pre>
+<h4 id="for-loop">For loop</h4>
+<pre><code>  &lt;?php 
+  for ($x = 0; $x &lt;= 2; $x++) {
+      echo "The number is: $x &lt;br&gt;";
+  }
+
+  /**
+   * Outputs
+   * The number 0
+   * The number 1
+   * The number 2
+   */
+</code></pre>
+<h4 id="foreach-loop">Foreach loop</h4>
+<pre><code>  &lt;?php
+  $stages = array(50, 110, 130);
+  $i = 0;
+
+  foreach ($stages as $value) {
+
+    echo "Stage $i Score: $value &lt;br /&gt;";
+    $i++;
+
+  }
+
+  /**
+   * Outputs
+   * Stage 0 Score: 50
+   * Stage 1 Score: 110
+   * Stage 2 Score: 130
+   */
 </code></pre></div>
             
         </div>
@@ -629,5 +732,5 @@ var_dump($days);
 
 <!--
 MkDocs version : 0.14.0
-Build Date UTC : 2016-01-26 08:48:08.618666
+Build Date UTC : 2016-01-26 09:31:30.514809
 -->
