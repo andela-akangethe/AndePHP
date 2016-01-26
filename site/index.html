@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+
+	<title>AndePHP</title>
+
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="./css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href=".">AndePHP</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="setup/php-setup/">PHP Install</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="setup/laravel-setup/">Laravel Setup</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="about/andela/">Andela</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="about/php/">PHP</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="setup/php-setup/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#php-curriculum">PHP Curriculum</a></li>
+        
+            <li><a href="#introduction">Introduction</a></li>
+        
+            <li><a href="#basic-php-syntax">Basic PHP Syntax</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="php-curriculum">PHP Curriculum</h1>
+<h2 id="introduction">Introduction</h2>
+<p>PHP is a really awesome language to learn either as a beginner or as an expert. When I initially began learning PHP, I felt lost and did not know where to begin. I hope this documentation will make your life profoundly easier and you will have fun as you enjoy the glory that is PHP.</p>
+<p>At the end of this documentation you will be a ninja with the great power. Remember with great power comes great responsibility. Enjoy :-)</p>
+<h2 id="basic-php-syntax">Basic PHP Syntax</h2>
+<p>Below is just an appetiser so that you know the basics.</p>
+<p>Ok let's begin with the absolute basic piece of information. The default file extension for PHP files is ".php".</p>
+<p>A PHP script can be placed anywhere in the .php file. Below is an example</p>
+<pre><code>&lt;?php
+
+   /**
+    * PHP code goes here
+    */
+
+  echo "This stuff doesn't seem soooo difficult, right?";
+</code></pre>
+<h3 id="echo">Echo</h3>
+<blockquote>
+<p><em>"So how do you output to a browser?"</em></p>
+</blockquote>
+<p>To display anything on the browser.</p>
+<pre><code>  echo "This is cool";
+  echo 'Huh! So you can also use a single quotation mark. Intersting.';
+  echo ("This is also cool");
+</code></pre>
+<blockquote>
+<p><em>"Awesome. Quick question whats the difference between having "" in echo vs '' ?"</em></p>
+</blockquote>
+<p>The main differnce between using "" and '' when dealing with echo is fairly simple.</p>
+<pre><code>$age = 10;
+
+echo "I have always taken desert after supper since I was $age years old."
+
+// The output will be:- I have always taken desert after supper since I was 10 years old.
+
+To achieve the same results using '' one would have to do the following
+
+echo 'I have always taken desert after supper since I was' . $age . 'years old.'
+
+This is called concatenating. This basically means add to the sentence $age.
+
+// This is still ok
+
+echo "I have always taken desert after supper since I was" . $age . "years old."
+</code></pre>
+<h3 id="comments-in-php">Comments in PHP</h3>
+<blockquote>
+<p><em>"How can I leave myself or future coders information about what a specific piece of code is supposed to do?"</em></p>
+</blockquote>
+<p>To achieve this you comment about that piece of code. An example is shown above. Another example can be found below. There are many ways of commenting.</p>
+<pre><code>&lt;?php
+
+  // This is a single-line comment
+
+  # This is also a single-line comment
+
+  /* *
+   * This is a multiple-lines comment block
+   * that spans over multiple
+   * lines
+  */
+</code></pre>
+<h3 id="variables">Variables</h3>
+<p>They are used to store information. To proper understand what variables are think of them as boxes in which the information is placed inside of them.</p>
+<p><img alt="Screenshot" src="./img/variable.jpg" /></p>
+<p>When the stored information is needed back it can be retrieved.</p>
+<p><img alt="Screenshot" src="./img/variable2.jpg" /></p>
+<blockquote>
+<p><em>"Cool, so what do I need to know about variables?"</em></p>
+</blockquote>
+<p>Here are the most important things to know about variables in PHP.</p>
+<ul>
+<li>
+<p>They are denoted by a dollar sign ($)</p>
+<pre><code>$variable = 3;
+</code></pre>
+</li>
+<li>
+<p>Variables can be declared before they are assigned some information</p>
+</li>
+<li>
+<p>Variables are assigned values using the equal (=) sign as shown above</p>
+</li>
+<li>
+<p>The value of the most recent variable overides that of the previous</p>
+<pre><code>$variable = 3;
+$variable = 5;
+
+echo $variable; // You will see 5
+</code></pre>
+</li>
+<li>
+<p>Suppose the variable name consists of two or more words eg school books, in PHP best practice dictates that we write such a variable as follows :-</p>
+<pre><code>$school_books = ['Math Book', 'Science Book'];
+</code></pre>
+<p>As you can see above we separate the two words making the variable name with an underscore</p>
+</li>
+</ul>
+<blockquote>
+<p><em>"Huh! are there different types of variables?"</em></p>
+</blockquote>
+<p>As a matter of fact, yes. PHP supports the following data types.</p>
+<ol>
+<li>
+<p>Integers − These whole numbers, without a decimal point, eg. 4195. They can be either positive or negative. Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0)</p>
+</li>
+<li>
+<p>Doubles − These are decimal point numbers eg. 3.14159 or 49.0</p>
+</li>
+<li>
+<p>Booleans − Can either be true or false</p>
+</li>
+<li>
+<p>NULL − This is a very special type that only has one value ie. NULL</p>
+</li>
+<li>
+<p>Strings − These are sequences of characters, take for instance 'The value of pie is 3.142'</p>
+</li>
+<li>
+<p>Arrays − These are named and indexed collections of other values</p>
+</li>
+<li>
+<p>Objects − These data type stores data and information on how to process that data. They must be explicitly declared.</p>
+</li>
+<li>
+<p>Resources − These are special variables that hold references to resources external to PHP (such as database connections).</p>
+</li>
+</ol>
+<blockquote>
+<p><em>"Well Jeez! Some of these data types sound complex. How will I get to understand them?"</em></p>
+</blockquote>
+<p>We will go though each and every one of these data types, breaking down doors until you have mastered each.</p>
+<p><img alt="Screenshot" src="./img/doors.jpg" /></p>
+<h3 id="arrays">Arrays</h3>
+<blockquote>
+<p><em>"So, what is an array?"</em></p>
+</blockquote>
+<p>To best understand what arrays are and how to use them let's look at a simple example.</p>
+<pre><code> &lt;?php
+
+// Suppose you want to store the days of the week this could be represented as
+
+$day1 = 'Monday';
+$day2 = 'Tuesday';
+$day3 = 'Wednesday';
+$day4 = 'Thursday';
+$day5 = 'Friday';
+$day6 = 'Saturday';
+$day7 = 'Sunday';
+
+// This is could work, but there is a more efficient way
+
+$days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+// $days is an array variable.
+</code></pre>
+<p>As you can see above declaring the days of the week as an array is more efficient.</p>
+<blockquote>
+<p><em>"Huh! Now that I understand what an array is, how can I access the elements of the array?"</em></p>
+</blockquote>
+<p>To best understand how to access the array elements, let's continue with the above</p>
+<pre><code>&lt;?php
+
+// Suppose you want to store the days of the week this could be represented as
+
+$day1 = 'Monday';
+$day2 = 'Tuesday';
+$day3 = 'Wednesday';
+$day4 = 'Thursday';
+$day5 = 'Friday';
+$day6 = 'Saturday';
+$day7 = 'Sunday';
+
+// This is could work, but there is a more efficient way
+
+// $days is an array variable.
+
+$days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+// To display the array elements you can either use print_r() or var_dump()
+
+var_dump($days);
+
+/**
+ * The output for var_dump will be
+ *    array(7) {
+ *        [0]=&gt;
+ *        string(6) "Monday"
+ *        [1]=&gt;
+ *        string(7) "Tuesday"
+ *        [2]=&gt;
+ *        string(9) "Wednesday"
+ *        [3]=&gt;
+ *        string(8) "Thursday"
+ *        [4]=&gt;
+ *        string(6) "Friday"
+ *        [5]=&gt;
+ *        string(8) "Saturday"
+ *         [6]=&gt;
+ *        string(6) "Sunday"
+ *    }
+ */
+
+  print_r($days)
+  /**
+   * The output will be
+   * Array
+   * (
+   *     [0] =&gt; Monday
+   *     [1] =&gt; Tuesday
+   *     [2] =&gt; Wednesday
+   *     [3] =&gt; Thursday
+   *     [4] =&gt; Friday
+   *     [5] =&gt; Saturday
+   *     [6] =&gt; Sunday
+   * )
+   */
+
+  /**
+   * As you can see above the dates are indexed starting from zero ie Monday is
+   * indexed 0 and Sunday is indexed 6
+   */
+
+  // To dispay Wednesday
+
+  echo $days[2]; // Outputs Wednesday
+</code></pre>
+<p>Let's dissect the result obtainined above when we do <code>print_r($days)</code>
+[0], [1], [2] etc seen above are called the keys while Monday, Tuesday etc are called the values</p>
+<blockquote>
+<p><em>"What if I don't want to have those horibble keys and want to customize my keys can I be able to do so?"</em></p>
+</blockquote>
+<p>As a matter of fact, yes. We call that type of array an associative array.</p>
+<p>Imagine you have a list of employees and you want to keep track of how old they are</p>
+<pre><code>  &lt;?php 
+  $employee = [
+    "Samuel" =&gt; "35 years",
+    "Bonny"  =&gt; "25 years",
+    "Clyde"  =&gt; "20 years",
+  ];
+
+  echo $employee["Clyde"]; // Outputs 20 years
+</code></pre>
+<blockquote>
+<p><em>"Awesome. Now that I get what arrays are and how to use get information from them can I do anything else with them say, add and remove items in the array?"</em></p>
+</blockquote>
+<p>Yes. Below is an example of how to add an element into an array.</p>
+<pre><code>  &lt;?php
+
+  // Let's use the days of the week example
+  $days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  /**
+   * To add Sunday we use array_push() which accepts two values ie the name of 
+   * the array and the value you intend to add
+   */
+
+  array_push($days, "Sunday");
+
+
+  // Alternatively to add Sunday we can also use
+
+  $days[] = "Sunday";
+
+  // To see if Sunday has been added
+
+  print_r($days);
+
+  /**
+   * The output is
+   * Array
+   * (
+   *   [0] =&gt; Monday
+   *   [1] =&gt; Tuesday
+   *   [2] =&gt; Wednesday
+   *   [3] =&gt; Thursday
+   *   [4] =&gt; Friday
+   *   [5] =&gt; Saturday
+   *   [6] =&gt; Sunday
+   * )
+   *
+   */
+</code></pre>
+<p>Now to remove the last item that we have added in the days of the week ie Sunday we use array_pop</p>
+<pre><code>  &lt;?php
+
+  // Let's use the days of the week example
+  $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+  array_pop($days);
+
+  print_r($days);
+
+  /**
+   * The output is
+   * Array
+   * (
+   *   [0] =&gt; Monday
+   *   [1] =&gt; Tuesday
+   *   [2] =&gt; Wednesday
+   *   [3] =&gt; Thursday
+   *   [4] =&gt; Friday
+   *   [5] =&gt; Saturday
+   * )
+   *
+   */
+</code></pre>
+<blockquote>
+<p><em>Ok, some of you might be like "But Sunday is the first day of the week not Monday how can I reflect that?"</em></p>
+</blockquote>
+<p>That's easy</p>
+<pre><code>  &lt;?php
+
+  // Let's declaire the days of the week
+
+  $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  array_unshift($days, "Sunday");
+
+  print_r($days);
+
+  /**
+   *  Array
+   * (
+   *    [0] =&gt; Sunday
+   *    [1] =&gt; Monday
+   *    [2] =&gt; Tuesday
+   *    [3] =&gt; Wednesday
+   *    [4] =&gt; Thursday
+   *    [5] =&gt; Friday
+   *    [6] =&gt; Saturday
+   * )
+   *
+   */
+</code></pre>
+<p>Depending on your needs there are so many array functions that you may want to use.For a comprehensive list of said functions go to <a href="http://za1.php.net/manual/en/book.array.php">php.net</a></p>
+<h3 id="conditions">Conditions</h3>
+<p>We as humans make decisions every day. Do I wake up or sleep in? Do I buy this or that etc. Computers also have that ability. PHP uses if, elseif and switch statements to make to fulfil this task.</p>
+<p><img alt="Screenshot" src="./img/conditions.png" /></p>
+<h4 id="if-statements">If statements</h4>
+<pre><code>  &lt;?php
+
+  $day = "Friday";
+
+  if($day == "Friday") {
+    echo "Yipee tomorrow I sleep in.";
+  } else {
+    echo "Noooooo tomorrow I have to wake up early";
+  }
+
+  // Output will be Yipee tomorrow I sleep in.
+</code></pre>
+<blockquote>
+<p><em>"What! why are we using two == signs?"</em></p>
+</blockquote>
+<p>Great observation. We use one = sign to assign values to a variable and  == or === signs in if statements.</p>
+<blockquote>
+<p><em>"So what it the diferrence between == and === sign?"</em></p>
+</blockquote>
+<p>To best explain this let's look at an example</p>
+<pre><code>&lt;?php
+
+  $day = "Friday";
+
+  if($day == true) {
+    echo "Yipee tomorrow I sleep in.";
+  } else {
+    echo "Noooooo tomorrow I have to wake up early";
+  }
+
+  // Output will be Yipee tomorrow I sleep in.
+
+
+  &lt;?php
+
+  $day = "Friday";
+
+  if($day === "Friday") {
+    echo "Yipee tomorrow I sleep in.";
+  } else {
+    echo "Noooooo tomorrow I have to wake up early";
+  }
+
+  // Output will be Yipee tomorrow I sleep in.
+</code></pre>
+<blockquote>
+<p><em>"Say whaaaat?"</em></p>
+</blockquote>
+<p>Ok, so this may be a little bit confusing but trust me its not. In the first case the == sign does not check the datatype it check if its a truthy value. Since <code>$day</code>is not equal to an empty string, it does have values then it's a truthy value.</p>
+<p>Three equal signs ie === is used when you want to be as explicit as possible.</p>
+<h4 id="elseif">Elseif</h4>
+<p>As you have seen above you use if statement when you have to make a deceision between two things but what if you have not one ,not two but many decisions to make, then you use elseif for that</p>
+<pre><code>   &lt;?php
+     $day = "Friday";
+
+     if ($day === "Friday") {
+        echo "Have a nice weekend!";
+     } elseif ($d === "Sun") {
+        echo "Have a nice Sunday!"; 
+     } else {
+        echo "Have a nice day!"; 
+     }
+
+    // Output is Have a nice weekend!
+</code></pre>
+<p>Please note that you can change the === with &lt;= , &gt;= , &lt; or &gt;</p>
+<pre><code>  $value1 &lt;= $value2 means $value1 is less or equal to $value2
+  $value1 &lt; $value2 means $value1 is less than $value2
+  $value1 &gt;= $value2 means $value1 is greater or equal to $value2
+  $value1 &gt; $value2 means $value1 is greater than $value2
+</code></pre>
+<p>For a comprehensive list of operators go to <a href="http://php.net/manual/en/language.operators.comparison.php">php.net</a></p>
+<h4 id="elseif_1">Elseif</h4>
+<p>To best expain these let's look at some code</p>
+<pre><code>    &lt;?php
+
+    $day = "Sunday";
+
+    switch($day) {
+      case "Monday":
+        echo "It's Monday";
+        break;
+      case "Tuesday":
+        echo "It's Tuesday";
+        break;
+      case "Wednesday":
+        echo "It's Wednesday";
+        break;
+      case "Thursday":
+        echo "It's Thursday";
+        break;
+      case "Friday":
+        echo "It's Friday";
+        break;
+      default:
+        echo "Hurray it's the weekend!";
+    }
+
+    // Outputs hurray it's the weekend
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script>
+        <script>var base_url = '.';</script>
+        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
+        <script src="./js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 0.14.0
+Build Date UTC : 2016-01-26 08:46:13.718821
+-->
