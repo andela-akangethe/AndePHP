@@ -478,7 +478,111 @@ var_dump($days);
    *
    */
 </code></pre>
-<p>Depending on your needs there are so many array functions that you may want to use.For a comprehensive list of said functions go to <a href="http://za1.php.net/manual/en/book.array.php">php.net</a></p></div>
+<p>Depending on your needs there are so many array functions that you may want to use.For a comprehensive list of said functions go to <a href="http://za1.php.net/manual/en/book.array.php">php.net</a></p>
+<h3 id="conditions">Conditions</h3>
+<p>We as humans make decisions every day. Do I wake up or sleep in? Do I buy this or that etc. Computers also have that ability. PHP uses if, elseif and switch statements to make to fulfil this task.</p>
+<p><img alt="Screenshot" src="./img/conditions.png" /></p>
+<h4 id="if-statements">If statements</h4>
+<pre><code>  &lt;?php
+
+  $day = "Friday";
+
+  if($day == "Friday") {
+    echo "Yipee tomorrow I sleep in.";
+  } else {
+    echo "Noooooo tomorrow I have to wake up early";
+  }
+
+  // Output will be Yipee tomorrow I sleep in.
+</code></pre>
+<blockquote>
+<p><em>"What! why are we using two == signs?"</em></p>
+</blockquote>
+<p>Great observation. We use one = sign to assign values to a variable and  == or === signs in if statements.</p>
+<blockquote>
+<p><em>"So what it the diferrence between == and === sign?"</em></p>
+</blockquote>
+<p>To best explain this let's look at an example</p>
+<pre><code>&lt;?php
+
+  $day = "Friday";
+
+  if($day == true) {
+    echo "Yipee tomorrow I sleep in.";
+  } else {
+    echo "Noooooo tomorrow I have to wake up early";
+  }
+
+  // Output will be Yipee tomorrow I sleep in.
+
+
+  &lt;?php
+
+  $day = "Friday";
+
+  if($day === "Friday") {
+    echo "Yipee tomorrow I sleep in.";
+  } else {
+    echo "Noooooo tomorrow I have to wake up early";
+  }
+
+  // Output will be Yipee tomorrow I sleep in.
+</code></pre>
+<blockquote>
+<p><em>"Say whaaaat?"</em></p>
+</blockquote>
+<p>Ok, so this may be a little bit confusing but trust me its not. In the first case the == sign does not check the datatype it check if its a truthy value. Since <code>$day</code>is not equal to an empty string, it does have values then it's a truthy value.</p>
+<p>Three equal signs ie === is used when you want to be as explicit as possible.</p>
+<h4 id="elseif">Elseif</h4>
+<p>As you have seen above you use if statement when you have to make a deceision between two things but what if you have not one ,not two but many decisions to make, then you use elseif for that</p>
+<pre><code>   &lt;?php
+     $day = "Friday";
+
+     if ($day === "Friday") {
+        echo "Have a nice weekend!";
+     } elseif ($d === "Sun") {
+        echo "Have a nice Sunday!"; 
+     } else {
+        echo "Have a nice day!"; 
+     }
+
+    // Output is Have a nice weekend!
+</code></pre>
+<p>Please note that you can change the === with &lt;= , &gt;= , &lt; or &gt;</p>
+<pre><code>  $value1 &lt;= $value2 means $value1 is less or equal to $value2
+  $value1 &lt; $value2 means $value1 is less than $value2
+  $value1 &gt;= $value2 means $value1 is greater or equal to $value2
+  $value1 &gt; $value2 means $value1 is greater than $value2
+</code></pre>
+<p>For a comprehensive list of operators go to <a href="http://php.net/manual/en/language.operators.comparison.php">php.net</a></p>
+<h4 id="elseif_1">Elseif</h4>
+<p>To best expain these let's look at some code</p>
+<pre><code>    &lt;?php
+
+    $day = "Sunday";
+
+    switch($day) {
+      case "Monday":
+        echo "It's Monday";
+        break;
+      case "Tuesday":
+        echo "It's Tuesday";
+        break;
+      case "Wednesday":
+        echo "It's Wednesday";
+        break;
+      case "Thursday":
+        echo "It's Thursday";
+        break;
+      case "Friday":
+        echo "It's Friday";
+        break;
+      default:
+        echo "Hurray it's the weekend!";
+    }
+
+    // Outputs hurray it's the weekend
+</code></pre></div>
             
         </div>
 
@@ -525,5 +629,5 @@ var_dump($days);
 
 <!--
 MkDocs version : 0.14.0
-Build Date UTC : 2016-01-25 12:26:07.074543
+Build Date UTC : 2016-01-26 08:48:08.618666
 -->
